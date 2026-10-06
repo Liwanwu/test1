@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通用 Element UI 表格 · 增删改查</title>
+    <!-- 引入 Element UI 样式 -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+            padding: 20px;
+        }
+        .app-container {  /*  主容器 */
+            max-width: 1300px; /* 容器最大宽度为 1300px。屏幕更宽时不会继续拉伸，保证内容不会过宽难以阅读。  */
+            margin: 0 auto;
+            background: white;
+            color:black;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            /* 阴影：水平偏移 0，垂直偏移 8px，模糊半径 24px，颜色为 8% 透明度的黑色。营造卡片悬浮感。*/
+            padding: 24px 28px; /*内边距：上下 24px，左右 28px。内容不贴边  */
+        }
+        
+       
+    </style>
+</head>
+<body>
+<div id="app">
+    <div class="app-container">
+        <h2> 一、各种图标</h2>
+       （1）用户：<i class="el-icon-user-solid" style="margin-right: 8px; color: #409EFF;"></i>
+       （2）对<i class="el-icon-check" style="margin-right: 8px; color: #409EFF;"></i>
+       （3）关闭<i class="el-icon-close" style="margin-right: 8px; color: #409EFF;"></i>
+       （4）左箭头 <i class="el-icon-arrow-left" style="margin-right: 8px; color: #99ff40;"></i>
+       （5）右箭 <i class="el-icon-arrow-right" style="margin-right: 8px; color: #40ff73;"></i>
+       （6）设置<i class="el-icon-setting" style="margin-right: 8px; color: #409EFF;"></i>
+       （7）上传<i class="el-icon-upload" style="margin-right: 8px; color: #409EFF;"></i>
+       （8）图片<i class="el-icon-picture" style="margin-right: 8px; color: #409EFF;"></i>
+       （9）实心星  <i class="el-icon-star-on" style="margin-right: 8px; color: #409EFF;"></i>  	
+       （10）空心星  <i class="el-icon-star-off" style="margin-right: 8px; color: #409EFF;"></i> 
+       
+	   <h2>二、增、删、改、查 </h2>
+       （1）增<i class="el-icon-plus" style="margin-right: 8px; color: #409EFF;"></i> 
+       (2) 删 <i class="el-icon-delete" style="margin-right: 8px; color: #409EFF;"></i> 
+       (3) 改 <i class="el-icon-edit" style="margin-right: 8px; color: #409EFF;"></i> 
+       (4)查 <i class="el-icon-search" style="margin-right: 8px; color: #409EFF;"></i> 
+       
+	   <h2>三、用户权限</h2>
+       （1） 用户头像<i class="el-icon-avatar" style="margin-right: 8px; color: #409EFF;"></i> 
+       (2) 锁定<i class="el-icon-lock" style="margin-right: 8px; color: #409EFF;"></i> 
+       (3) 解锁<i class="el-icon-unlock" style="margin-right: 8px; color: #409EFF;"></i> 
+       (4) 钥匙<i class="el-icon-key" style="margin-right: 8px; color: #409EFF;"></i> 
+       <!-- 代表密码、解锁、密钥。常用于“修改密码”按钮或密码输入框-->
+       (5)勾选/确认<i class="el-icon-s-check" style="margin-right: 8px; color: #409EFF;"></i>
+       <!--代表校验通过、审批完成、成功状态。常用于“确认”、“提交”或状态标识-->
+      
+       <h2>四、其他图标</h2>
+       （1）图标按钮<el-button icon="el-icon-refresh-right"  style="margin-left: 20px;">重置</el-button>
+          
+        <h2>五、分页组件</h2>
+        <el-pagination
+                background
+                layout="total, sizes, prev, pager, next, jumper"
+                :total="50"
+                :page-size="10"
+                :page-sizes="[5, 10, 15, 20]"
+                ></el-pagination>
+
+        <h2>六、插槽--</h2>
+        <!-- 具名插槽 footer：弹窗底部按钮 -->
+        <div slot="footer" class="dialog-footer">
+              <el-button>取消</el-button>
+              <el-button type="primary">确定</el-button>
+        </div>
+
+     </div>
+</div>
+
+<!-- 引入 Vue 和 Element UI -->
+<script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+            }
+        },
+        computed: {
+           
+          
+        },
+        methods: {
+            // 部门标签颜色
+          
+            }
+            // 提交表单 (新增/编辑)
+        });   
+</script>
+</body>
+</html>
